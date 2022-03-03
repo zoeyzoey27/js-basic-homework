@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4 - Sắp xếp chuỗi</title>
+    <style>
+        #input-text{
+            display: block;
+            margin: 20px auto;
+            width: 35%;
+            padding: 8px 15px;
+        }
+        .btn-sort{
+            display: block;
+            margin: 0 auto;
+            padding: 8px 15px;
+        }
+        #result-text{
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+     <input type="text" id="input-text" placeholder="Nhập vào chuỗi bạn muốn sắp xếp">
+     <button class="btn-sort" onclick="sortText()">Sắp xếp chuỗi</button>
+     <p id="result-text"></p>
+     <script>
+           function sortText(){
+               let inputText = document.getElementById("input-text").value;
+               let result = [...inputText].sort((a, b) => a.localeCompare(b)).join("");
+               document.getElementById ("result-text").innerHTML = "Kết quả: "+result;
+           }
+     </script>
+</body>
+</html>

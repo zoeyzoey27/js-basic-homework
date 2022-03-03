@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5 - Chữ cái in hoa</title>
+    <style>
+        #input-text{
+            display: block;
+            margin: 20px auto;
+            width: 35%;
+            padding: 8px 15px;
+        }
+        .btn-sort{
+            display: block;
+            margin: 0 auto;
+            padding: 8px 15px;
+        }
+        #result-text{
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input-text" placeholder="Nhập một chuỗi">
+     <button class="btn-sort" onclick="solve()">Xử lý</button>
+     <p id="result-text"></p>
+     <script>
+         function solve(){
+            let string = document.getElementById("input-text").value;
+            let word = string.toLowerCase().split(" ");
+            let result = "";
+            for (var i=0; i<word.length; i++){
+                 word[i] = word[i][0].toUpperCase() + word[i].slice(1);
+            }
+            result = word.join(" ");
+            document.getElementById("result-text").innerHTML = "Kết quả: "+result;
+         }
+     </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 2 - Thuộc tính</title>
+</head>
+<body>
+    <p><a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="self" href="https://www.w3resource.com/">w3resource</a></p>
+    <button onclick="getAttributes()">Click here to get attributes value</button>
+    <script>
+         function getAttributes() {
+              let a = document.getElementById('w3r');
+              for (var i=0, atts = a.attributes, n = atts.length, arr = []; i<n; i++){
+                  att = atts[i];
+                  alert(att.nodeName+" = "+att.nodeValue);
+              }
+         }
+    </script>
+</body>
+</html>
